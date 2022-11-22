@@ -10,15 +10,15 @@ class GlassBOx extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40),
+      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(50),
         child: Container(
-          color: Color.fromARGB(255, 84, 138, 164),
+          color: Color.fromARGB(255, 49, 86, 105),
           height: 80,
-          padding: const EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5), 
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 30, sigmaY: 10),
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10),
             child: Container(
               alignment: Alignment.center,
               child: child,

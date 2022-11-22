@@ -21,7 +21,7 @@ class MyAppBar extends StatelessWidget {
               title!,
               style: GoogleFonts.bebasNeue(
                 fontSize: 75,
-                color: Colors.grey[800],
+                color: Color.fromARGB(255, 29, 29, 29),
               ),
             ),
           ),
