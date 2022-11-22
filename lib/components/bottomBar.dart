@@ -11,27 +11,17 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-  //  index = widget!.index;
-  // int _isIndex = 0;
-  // //VoidCallback onTap;
-  // void onTap(widget.index) {
-  //   setState(
-  //     () {
-  //       _isSelected = !_isSelected;
-  //     },
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     int index = widget.index;
+
     return BottomNavigationBar(
       backgroundColor: Colors.transparent,
       currentIndex: widget.index,
       onTap: widget.onTap,
       selectedItemColor: Colors.white,
       //selectedItemColor: Color(0XFFEF972C),
-      unselectedItemColor: Color.fromARGB(69, 216, 216, 216),
+      unselectedItemColor: const Color.fromARGB(69, 216, 216, 216),
       // backgroundColor: Colors.transparent,
       showSelectedLabels: false,
       showUnselectedLabels: false,
@@ -39,30 +29,30 @@ class _BottomNavBarState extends State<BottomNavBar> {
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
-          icon:
-              index == 0 ? Icon(Icons.home_filled) : Icon(Icons.home_outlined),
+          icon: index == 0
+              ? const Icon(Icons.home_filled)
+              : const Icon(Icons.home_outlined),
           label: "",
         ),
         BottomNavigationBarItem(
           icon: index == 1
-              ? Icon(Icons.notifications)
-              : Icon(Icons.notifications_outlined),
+              ? const Icon(Icons.notifications)
+              : const Icon(Icons.notifications_outlined),
           label: "",
         ),
         BottomNavigationBarItem(
-          icon:
-              index == 2 ? Icon(Icons.favorite) : Icon(Icons.favorite_outline),
+          icon: index == 2
+              ? const Icon(Icons.favorite)
+              : const Icon(Icons.favorite_outline),
           label: "",
         ),
         BottomNavigationBarItem(
-          icon: index == 3 ? Icon(Icons.person) : Icon(Icons.person_outline),
+          icon: index == 3
+              ? const Icon(Icons.person)
+              : const Icon(Icons.person_outline),
           label: "",
         ),
       ],
     );
   }
 }
-
-// Color pickedColor() {
-//   return Container();
-// }

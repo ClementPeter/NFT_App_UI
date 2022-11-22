@@ -12,10 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NFT AP',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      // ),
+      title: 'NFT APP', 
       theme: ThemeData(primarySwatch: Colors.orange),
       home: const MyHomePage(title: 'NFT APP'),
     );

@@ -5,15 +5,15 @@ import 'package:nft_app/components/searchBox.dart';
 class MyAppBar extends StatelessWidget {
   final String? title;
 
-  VoidCallback onSearcTip;
-  MyAppBar({super.key, required this.title, required this.onSearcTip});
+  MyAppBar({super.key, required this.title});
+
+  TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: Row(
-        //crossAxisAlignment: CrossAxisAlignment.baseline,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
@@ -21,28 +21,11 @@ class MyAppBar extends StatelessWidget {
               title!,
               style: GoogleFonts.bebasNeue(
                 fontSize: 75,
-                color: Color.fromARGB(255, 29, 29, 29),
+                color: const Color.fromARGB(255, 29, 29, 29),
               ),
             ),
           ),
-          // GestureDetector(
-          //   child: Container(
-          //     padding: const EdgeInsets.all(12),
-          //     decoration: BoxDecoration(
-          //       border: Border.all(color: Colors.white),
-          //       borderRadius: BorderRadius.circular(16),
-          //       color: Colors.grey[200],
-          //     ),
-          //     child: Icon(
-          //       Icons.search,
-          //       size: 36,
-          //       color: Colors.grey[800],
-          //     ),
-          //   ),
-          // ),
-
-          AnimatedSearchBar(),
-          //SizedBox(width: 40)
+          AnimatedSearchBar(textEditingController: textEditingController),
         ],
       ),
     );

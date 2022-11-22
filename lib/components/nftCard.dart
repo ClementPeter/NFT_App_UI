@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Creates Card for NFT Image
 class NftCard extends StatelessWidget {
   NftCard({@required this.imagePath, super.key});
 

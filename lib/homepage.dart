@@ -9,24 +9,21 @@ import 'package:nft_app/tabs/trending.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void onSearch() {}
 
-  List tabOptions = [
-    ["RECENTS", RecentTab()],
-    ["TRENDING", TrendingTab()],
-    ["TOP", TopTab()]
+  //List Containing tab view "title" and "contents"
+  List tabOptions = const [
+    ["RECENTS",  RecentTab()],
+    ["TRENDING",  TrendingTab()],
+    ["TOP",  TopTab()]
   ];
 
-  //bottom NavBar  handle BOttomNav Bar Index
-
+  //bottom NavBar to handle BOttomNav Bar Index
   int _currentIndex = 0;
 
   void _handleIndexChange(int? index) {
@@ -40,35 +37,32 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
       length: tabOptions.length,
       child: Scaffold(
-          backgroundColor: Colors.grey[300],
-          extendBody: true,
-          bottomNavigationBar: GlassBOx(
-            child:
-                BottomNavBar(index: _currentIndex, onTap: _handleIndexChange),
-          ),
-          //backgroundColor: Colors.grey[300],
-          body: CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Column(
-                  children: [
-                    const SizedBox(height: 50),
-                    MyAppBar(
-                        title: "EXPLORE\nCOLLECTION", onSearcTip: onSearch),
-                    const SizedBox(height: 50),
-                    SizedBox(
-                      height: 600,
-                      child: MyTabBarMenu(
-                        tabOptions: tabOptions,
-                      ),
-                    )
-                  ],
-                ),
+        backgroundColor: Colors.grey[300],
+        extendBody: true,
+        bottomNavigationBar: GlassBOx(
+          child: BottomNavBar(index: _currentIndex, onTap: _handleIndexChange),
+        ),
+        //backgroundColor: Colors.grey[300],
+        body: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                  const SizedBox(height: 50),
+                  MyAppBar(title: "EXPLORE\nCOLLECTION"),
+                  const SizedBox(height: 50),
+                  SizedBox(
+                    height: 600,
+                    child: MyTabBarMenu(
+                      tabOptions: tabOptions,
+                    ),
+                  )
+                ],
               ),
-            ],
-          )
-          //body: ,
-          ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

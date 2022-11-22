@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+//Creates an Animated Search box
 class AnimatedSearchBar extends StatefulWidget {
-  const AnimatedSearchBar({super.key});
+  AnimatedSearchBar({super.key, required this.textEditingController});
+
+  TextEditingController textEditingController;
 
   @override
   State<AnimatedSearchBar> createState() => _AnimatedSearchBarState();
@@ -12,7 +15,7 @@ class _AnimatedSearchBarState extends State<AnimatedSearchBar> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
       width: _folded ? 56 : 250,
       height: 56,
       decoration: BoxDecoration(
@@ -24,10 +27,11 @@ class _AnimatedSearchBarState extends State<AnimatedSearchBar> {
         children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 16),
               child: !_folded
-                  ? const TextField(
-                      decoration: InputDecoration(
+                  ? TextField(
+                      controller: widget.textEditingController,
+                      decoration: const InputDecoration(
                         hintText: "Search your NFT's",
                         hintStyle: TextStyle(
                           color: Color(0XFFEF972C),
@@ -39,20 +43,22 @@ class _AnimatedSearchBarState extends State<AnimatedSearchBar> {
             ),
           ),
           AnimatedContainer(
-            duration: Duration(milliseconds: 400),
+            duration: const Duration(milliseconds: 400),
             child: Material(
               type: MaterialType.transparency,
               child: InkWell(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(_folded ? 32 : 0),
-                  topRight: Radius.circular(32),
+                  topRight: const Radius.circular(32),
                   bottomLeft: Radius.circular(_folded ? 32 : 0),
-                  bottomRight: Radius.circular(32),
+                  bottomRight: const Radius.circular(32),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Icon(_folded ? Icons.search : Icons.cancel_outlined,
-                      color: Colors.grey[800]),
+                  child: Icon(
+                    _folded ? Icons.search : Icons.cancel_outlined,
+                    color: Colors.grey[800],
+                  ),
                 ),
                 onTap: () {
                   setState(

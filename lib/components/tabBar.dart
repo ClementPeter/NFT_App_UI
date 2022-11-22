@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+//Displays 
 class MyTabBarMenu extends StatelessWidget {
   MyTabBarMenu({required this.tabOptions, super.key});
 
@@ -18,12 +19,14 @@ class MyTabBarMenu extends StatelessWidget {
           unselectedLabelColor: Colors.grey,
           labelStyle: GoogleFonts.bebasNeue(fontSize: 30),
           isScrollable: true,
+          //Gets the title from "tapOptions" list
           tabs: [
             Tab(child: Text(tabOptions[0][0].toString().toUpperCase())),
             Tab(child: Text(tabOptions[1][0].toString().toUpperCase())),
             Tab(child: Text(tabOptions[2][0].toString().toUpperCase())),
           ],
         ),
+        //Get the content from the "tabOPtions" list
         Expanded(
           child: TabBarView(
             children: [
