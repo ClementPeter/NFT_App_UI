@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-//Displays 
+//Displays TabBar views
 class MyTabBarMenu extends StatelessWidget {
   MyTabBarMenu({required this.tabOptions, super.key});
 

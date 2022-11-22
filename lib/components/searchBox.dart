@@ -11,7 +11,7 @@ class AnimatedSearchBar extends StatefulWidget {
 }
 
 class _AnimatedSearchBarState extends State<AnimatedSearchBar> {
-  bool _folded = true;
+  bool _folded = true; //use as a trigger for tenary operator conditions
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
