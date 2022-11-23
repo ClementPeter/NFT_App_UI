@@ -41,8 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         extendBody: true,
         bottomNavigationBar: GlassBOx(
           child: BottomNavBar(index: _currentIndex, onTap: _handleIndexChange),
-        ),
-        //backgroundColor: Colors.grey[300],
+        ),      
         body: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
