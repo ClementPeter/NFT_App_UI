@@ -23,9 +23,9 @@ Showcase of an NFT APP UI
 
 ## 📸 Screen shots
 
-|  |
-| ![Screenshot_20221122-155308](https://user-images.githubusercontent.com/61213263/203463395-efeada44-dda1-4750-8886-41953c5698ee.png)  |
-| ![Screenshot_20221122-155338](https://user-images.githubusercontent.com/61213263/203463451-fb881a23-76e5-4034-981b-442ccc8ce6bf.png) |
+
+ ![Screenshot_20221122-155308](https://user-images.githubusercontent.com/61213263/203463395-efeada44-dda1-4750-8886-41953c5698ee.png) 
+ ![Screenshot_20221122-155338](https://user-images.githubusercontent.com/61213263/203463451-fb881a23-76e5-4034-981b-442ccc8ce6bf.png) 
 
 
 ## 🔌 Plugins
