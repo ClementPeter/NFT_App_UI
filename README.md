@@ -21,11 +21,11 @@ samples, guidance on mobile development, and a full API reference.
 Showcase of an NFT APP UI
 
 
-## 📸 ScreenShots
+## 📸 Screen shots
 
-| --------------------------------- |
-| <img src="ss/1.png" width="400">  |
-| <img src="ss/3.png" width="400">  |
+|  |
+| ![Screenshot_20221122-155308](https://user-images.githubusercontent.com/61213263/203463395-efeada44-dda1-4750-8886-41953c5698ee.png)  |
+| ![Screenshot_20221122-155338](https://user-images.githubusercontent.com/61213263/203463451-fb881a23-76e5-4034-981b-442ccc8ce6bf.png) |
 
 
 ## 🔌 Plugins
