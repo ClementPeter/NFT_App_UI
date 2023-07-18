@@ -15,12 +15,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   //List Containing tab view "title" and "contents"
   List tabOptions = const [
-    ["RECENTS",  RecentTab()],
-    ["TRENDING",  TrendingTab()],
-    ["TOP",  TopTab()]
+    ["RECENTS", RecentTab()],
+    ["TRENDING", TrendingTab()],
+    ["TOP", TopTab()]
   ];
 
   //bottom NavBar to handle BOttomNav Bar Index
@@ -39,19 +38,19 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         backgroundColor: Colors.grey[300],
         extendBody: true,
-        bottomNavigationBar: GlassBOx(
+        bottomNavigationBar: GlassBox(
           child: BottomNavBar(index: _currentIndex, onTap: _handleIndexChange),
-        ),      
+        ),
         body: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
               child: Column(
                 children: [
-                  const SizedBox(height: 50),
+                  // const SizedBox(height: 50),
                   MyAppBar(title: "EXPLORE\nCOLLECTION"),
-                  const SizedBox(height: 50),
+                  //const SizedBox(height: 50),
                   SizedBox(
-                    height: 600,
+                    height: 500,
                     child: MyTabBarMenu(
                       tabOptions: tabOptions,
                     ),

@@ -14,17 +14,22 @@ class MyAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(25.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Expanded(
-            child: Text(
-              title!,
-              style: GoogleFonts.bebasNeue(
-                fontSize: 75,
-                color: const Color.fromARGB(255, 29, 29, 29),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Text(
+                  title!,
+                  style: GoogleFonts.bebasNeue(
+                    fontSize: 70,
+                    color: const Color.fromARGB(255, 29, 29, 29),
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
           AnimatedSearchBar(textEditingController: textEditingController),
         ],
