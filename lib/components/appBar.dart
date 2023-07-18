@@ -4,11 +4,11 @@ import 'package:nft_app/components/searchBox.dart';
 
 //Builds Custom AppBar and Animated Search Box
 class MyAppBar extends StatelessWidget {
-  final String? title;
-
   MyAppBar({super.key, required this.title});
 
-  TextEditingController textEditingController = TextEditingController();
+  final String? title;
+
+  final TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

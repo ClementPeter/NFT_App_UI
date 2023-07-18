@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 //Creates an Animated Search box
 class AnimatedSearchBar extends StatefulWidget {
-  AnimatedSearchBar({super.key, required this.textEditingController});
+  const AnimatedSearchBar({super.key, required this.textEditingController});
 
-  TextEditingController textEditingController;
+  final TextEditingController textEditingController;
 
   @override
   State<AnimatedSearchBar> createState() => _AnimatedSearchBarState();
